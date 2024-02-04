@@ -34,8 +34,8 @@ export default function Home() {
   }
 
   return (
-    <main className="flex flex-col justify-center items-center h-dvh bg-purple-300 overflow-hidden">
-      <div className="absolute">
+    <main className="flex flex-col justify-center items-center h-dvh bg-purple-300 overflow-hidden select-none">
+      <div className="absolute select-none">
         <Image src={"/hearts.gif"} width={600} height={600} alt="gif" />
       </div>
 

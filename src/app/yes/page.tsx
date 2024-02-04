@@ -41,7 +41,7 @@ export default function SheSaidYes() {
   };
 
   return (
-    <main className="flex flex-col justify-start items-center h-dvh bg-purple-300 overflow-hidden">
+    <main className="flex flex-col justify-start items-center h-dvh bg-purple-300 overflow-hidden select-none">
       <Image
         className="pb-20"
         src={"/siuuu.gif"}
