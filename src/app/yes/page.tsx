@@ -9,7 +9,7 @@ export default function SheSaidYes() {
   useEffect(() => {
     if (vidRef.current) {
       // Set the point of start to 30 seconds
-      vidRef.current.currentTime = 30;
+      vidRef.current.currentTime = 37;
 
       // Start playback
       vidRef.current.play().catch((error) => {
@@ -68,7 +68,7 @@ export default function SheSaidYes() {
       </div>
 
       <video autoPlay={true} ref={vidRef} className="md:w-[700px]">
-        <source src="Kazzio - Safira (720p).mp4#t=0:30" type="video/mp4" />
+        <source src="Kazzio - Safira (720p).mp4#t=0:40" type="video/mp4" />
       </video>
 
       <Image
