@@ -8,15 +8,18 @@ export default function SheSaidYes() {
 
   useEffect(() => {
     if (vidRef.current) {
-      // Defina o ponto de início para 30 segundos
-      vidRef.current.currentTime = 37;
+      // Set the point of start to 30 seconds
+      vidRef.current.currentTime = 30;
 
-      // Inicie a reprodução
+      // Start playback
       vidRef.current.play().catch((error) => {
-        console.error("Erro ao iniciar a reprodução:", error);
+        console.error("Error playing video:", error);
       });
+
+      // Disable Picture-in-Picture mode
+      vidRef.current.disablePictureInPicture = true;
     }
-  }, []);
+  }, [vidRef]);
 
   return (
     <main className="flex flex-col justify-start items-center h-dvh bg-purple-300 overflow-hidden">
