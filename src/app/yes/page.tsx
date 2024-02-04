@@ -67,7 +67,7 @@ export default function SheSaidYes() {
         <Image src={"/hearts.gif"} width={600} height={600} alt="gif" />
       </div>
 
-      <video controls autoPlay={true} ref={vidRef} className="md:w-[700px]">
+      <video autoPlay={true} ref={vidRef} className="md:w-[700px]">
         <source src="Kazzio - Safira (720p).mp4#t=0:30" type="video/mp4" />
       </video>
 
