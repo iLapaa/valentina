@@ -16,10 +16,29 @@ export default function SheSaidYes() {
         console.error("Error playing video:", error);
       });
 
-      // Disable Picture-in-Picture mode
-      vidRef.current.disablePictureInPicture = true;
+      // Event listener to prevent fullscreen
+      const handleFullscreenChange = () => {
+        if (document.fullscreenElement) {
+          exitFullscreen();
+        }
+      };
+
+      document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+      return () => {
+        document.removeEventListener(
+          "fullscreenchange",
+          handleFullscreenChange
+        );
+      };
     }
   }, [vidRef]);
+
+  const exitFullscreen = () => {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  };
 
   return (
     <main className="flex flex-col justify-start items-center h-dvh bg-purple-300 overflow-hidden">
